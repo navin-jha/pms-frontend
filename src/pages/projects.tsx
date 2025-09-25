@@ -346,6 +346,8 @@ const Projects = () => {
                   Name
                 </label>
                 <input
+                  id='name'
+                  name='name'
                   type="text"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
