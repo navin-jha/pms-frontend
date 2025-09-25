@@ -30,9 +30,7 @@ const MeetingMinutes = () => {
     queryKey: ['meetings'],
     queryFn: async () => {
       try {
-        console.log('Fetching meeting minutes...');
         const response = await api.get('/meeting-minutes/select');
-        console.log('Meeting minutes response:', response.data);
         return response.data.data || [];
       } catch (error) {
         console.error('Error fetching meeting minutes:', error);
